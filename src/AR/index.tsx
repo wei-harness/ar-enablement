@@ -2,7 +2,7 @@ import { signOutApp } from '../auth';
 import { useUserProfile } from '../hooks/useAuth';
 import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import styles from './ccm.module.scss';
+import styles from './ar.module.scss';
 import { CompetitiveSection } from './sections/CompetitiveSection';
 import { CustomersSection } from './sections/CustomersSection';
 import { KnowledgeSection } from './sections/KnowledgeSection';
@@ -164,7 +164,7 @@ function useReveal(ref: React.RefObject<HTMLDivElement | null>) {
   });
 }
 
-export default function CCMPage() {
+export default function ARPage() {
   const [section, setSection] = useState<SectionId>('overview');
   const wrapRef = useRef<HTMLDivElement>(null);
 
@@ -176,15 +176,14 @@ export default function CCMPage() {
   }
 
   return (
-    <div className={styles.ccmRoot}>
+    <div className={styles.arRoot}>
       <Helmet>
         <title>AR Sales Enablement | Harness</title>
       </Helmet>
 
       {/* Announcement bar */}
       <div className={styles.annBar}>
-        New Test: Data Pipeline V2 live — latency reduced from 29 hrs to 3 hrs · Azure Commitment
-        Orchestrator shipping Q3 2026
+        AR Sales Enablement — content coming soon.
       </div>
 
       {/* Top nav */}
@@ -192,7 +191,7 @@ export default function CCMPage() {
         <div className={styles.navBrand}>
           <img
             src="/assets/icon_ar.svg"
-            alt="CCM"
+            alt="AR"
             width="22"
             height="22"
             className={styles.navBrandLogo}

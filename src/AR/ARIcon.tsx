@@ -30,7 +30,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ size?: number; strokeWidth?
   'cloud': LuCloud,
 }
 
-interface CCMIconProps {
+interface ARIconProps {
   name: string
   size?: number
   strokeWidth?: number
@@ -38,7 +38,7 @@ interface CCMIconProps {
   className?: string
 }
 
-export function CCMIcon({ name, size = 16, strokeWidth = 1.5, style, className }: CCMIconProps) {
+export function ARIcon({ name, size = 16, strokeWidth = 1.5, style, className }: ARIconProps) {
   const Comp = ICON_MAP[name]
   if (!Comp) return null
   return (

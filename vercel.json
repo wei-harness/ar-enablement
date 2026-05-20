@@ -2,12 +2,12 @@
   "buildCommand": "pnpm run build:prod",
   "outputDirectory": "dist",
   "redirects": [
-    { "source": "/", "destination": "/ccm/", "permanent": true }
+    { "source": "/", "destination": "/ar/", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/ccm/(.*)", "destination": "/ccm/index.html" },
-    { "source": "/ccm-sales-enablement", "destination": "/ccm/index.html" },
-    { "source": "/login/callback{/}?", "destination": "/ccm/index.html" }
+    { "source": "/ar/(.*)", "destination": "/ar/index.html" },
+    { "source": "/ar-sales-enablement", "destination": "/ar/index.html" },
+    { "source": "/login/callback{/}?", "destination": "/ar/index.html" }
   ]
-  
+
 }

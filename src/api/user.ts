@@ -9,3 +9,4 @@ export const getCurrentUser = async (): Promise<User | null> => {
     email: (claims.email as string) || '',
   }
 }
+

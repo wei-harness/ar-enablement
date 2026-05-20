@@ -1,7 +1,6 @@
 /* Newsreader + Geist loaded via <link> in index.html */
 
-.ccmRoot {
-  /* ── Light-theme token bridge: maps legacy ARvariables → Harness design system ── */
+.arRoot {
 
   /* Surfaces */
   --bg: var(--bg-canvas);
@@ -3546,7 +3545,7 @@
     transform: none;
     transition: none;
   }
-  .ccmRoot * {
+  .arRoot * {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }

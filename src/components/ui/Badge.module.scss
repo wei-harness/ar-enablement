@@ -1,0 +1,67 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-label);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px var(--space-sm);
+  white-space: nowrap;
+  line-height: var(--leading-ui);
+}
+
+.shape-pill {
+  border-radius: var(--radius-large);
+}
+.shape-sharp {
+  border-radius: var(--radius-sharp);
+}
+
+.v-now {
+  background: var(--state-success-bg);
+  color: var(--state-success);
+  border: 1px solid color-mix(in srgb, var(--state-success) 30%, transparent);
+}
+
+.v-soon {
+  background: color-mix(in srgb, var(--warning-amber) 10%, var(--bg-white));
+  color: var(--warning-amber);
+  border: 1px solid color-mix(in srgb, var(--warning-amber) 30%, transparent);
+}
+
+.v-later {
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+
+.v-accent {
+  background: color-mix(in srgb, var(--color-finops) 10%, transparent);
+  color: var(--color-finops);
+  border: 1px solid color-mix(in srgb, var(--color-finops) 20%, transparent);
+}
+
+.v-success {
+  background: var(--state-success-bg);
+  color: var(--state-success);
+  border: 1px solid color-mix(in srgb, var(--state-success) 30%, transparent);
+}
+
+.v-warning {
+  background: color-mix(in srgb, var(--warning-amber) 10%, var(--bg-white));
+  color: var(--warning-amber);
+  border: 1px solid color-mix(in srgb, var(--warning-amber) 30%, transparent);
+}
+
+.v-danger {
+  background: color-mix(in srgb, #ef4444 10%, var(--bg-white));
+  color: #ef4444;
+  border: 1px solid color-mix(in srgb, #ef4444 30%, transparent);
+}
+
+.v-muted {
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}

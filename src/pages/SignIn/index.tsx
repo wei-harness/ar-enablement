@@ -12,7 +12,7 @@ export function SignInPage() {
 
   useEffect(() => {
     if (authState?.isAuthenticated) {
-      navigate('/ccm', { replace: true });
+      navigate('/ar', { replace: true });
     }
   }, [authState, navigate]);
 

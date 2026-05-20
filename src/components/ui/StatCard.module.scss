@@ -1,0 +1,30 @@
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--stat-grid-min, 180px), 1fr));
+  gap: var(--space-base);
+}
+
+.statCard {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-whisper);
+}
+
+.value {
+  font-family: var(--font-serif);
+  font-size: var(--text-h4);
+  font-weight: var(--weight-normal);
+  color: var(--stat-value-color, var(--color-finops));
+  line-height: var(--leading-tight);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: var(--text-label);
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
