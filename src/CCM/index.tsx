@@ -178,7 +178,7 @@ export default function CCMPage() {
   return (
     <div className={styles.ccmRoot}>
       <Helmet>
-        <title>CCM Sales Enablement | Harness</title>
+        <title>AR Sales Enablement | Harness</title>
       </Helmet>
 
       {/* Announcement bar */}
@@ -191,13 +191,13 @@ export default function CCMPage() {
       <nav className={styles.topNav}>
         <div className={styles.navBrand}>
           <img
-            src="/assets/icon_ccm.svg"
+            src="/assets/icon_ar.svg"
             alt="CCM"
             width="22"
             height="22"
             className={styles.navBrandLogo}
           />
-          <span>CCM Sales Kit</span>
+          <span>AR Sales Kit</span>
         </div>
 
         <div className={styles.navItems}>

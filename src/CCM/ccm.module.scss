@@ -1,33 +1,33 @@
 /* Newsreader + Geist loaded via <link> in index.html */
 
 .ccmRoot {
-  /* ── Light-theme token bridge: maps legacy CCM variables → Harness design system ── */
+  /* ── Light-theme token bridge: maps legacy ARvariables → Harness design system ── */
 
   /* Surfaces */
-  --bg:            var(--bg-canvas);
-  --bg-panel:      var(--bg-surface);
-  --bg-card:       var(--bg-white);
+  --bg: var(--bg-canvas);
+  --bg-panel: var(--bg-surface);
+  --bg-card: var(--bg-white);
   --bg-card-hover: var(--bg-surface);
 
   /* Borders */
-  --border:        var(--border-light);
-  --border-hover:  var(--border-medium);
+  --border: var(--border-light);
+  --border-hover: var(--border-medium);
 
   /* Text — primary/secondary inherit from :root Harness tokens unchanged */
   --text-tertiary: var(--text-muted);
 
-  /* Accent — CCM belongs to Cost & FinOps pillar */
-  --accent:        var(--color-finops);
-  --accent-sub:    color-mix(in srgb, var(--color-finops) 8%, transparent);
-  --accent-bdr:    color-mix(in srgb, var(--color-finops) 20%, transparent);
+  /* Accent — ARbelongs to Cost & FinOps pillar */
+  --accent: var(--color-finops);
+  --accent-sub: color-mix(in srgb, var(--color-finops) 8%, transparent);
+  --accent-bdr: color-mix(in srgb, var(--color-finops) 20%, transparent);
 
   /* Semantic state colors */
-  --success:       var(--state-success);
-  --success-bg:    var(--state-success-bg);
-  --warn:          var(--warning-amber);
-  --warn-bg:       color-mix(in srgb, var(--warning-amber) 10%, var(--bg-white));
-  --danger:        #ef4444;
-  --danger-bg:     color-mix(in srgb, var(--danger) 10%, var(--bg-white));
+  --success: var(--state-success);
+  --success-bg: var(--state-success-bg);
+  --warn: var(--warning-amber);
+  --warn-bg: color-mix(in srgb, var(--warning-amber) 10%, var(--bg-white));
+  --danger: #ef4444;
+  --danger-bg: color-mix(in srgb, var(--danger) 10%, var(--bg-white));
 
   /* Radius aliases */
   --r-sm: var(--radius-sharp);
@@ -42,47 +42,46 @@
   --weight-bold: 700;
 
   /* SKU palette — per-product accent tokens for cards, icons, tabs */
-  --sku-ci:     var(--color-finops);
-  --sku-ci-bg:  color-mix(in srgb, var(--color-finops) 10%, transparent);
+  --sku-ci: var(--color-finops);
+  --sku-ci-bg: color-mix(in srgb, var(--color-finops) 10%, transparent);
   --sku-ci-bdr: color-mix(in srgb, var(--color-finops) 25%, transparent);
 
-  --sku-ag:     var(--color-devops);
-  --sku-ag-bg:  color-mix(in srgb, var(--color-devops) 10%, transparent);
+  --sku-ag: var(--color-devops);
+  --sku-ag-bg: color-mix(in srgb, var(--color-devops) 10%, transparent);
   --sku-ag-bdr: color-mix(in srgb, var(--color-devops) 25%, transparent);
 
-  --sku-as:     var(--color-quality);
-  --sku-as-bg:  color-mix(in srgb, var(--color-quality) 10%, transparent);
+  --sku-as: var(--color-quality);
+  --sku-as-bg: color-mix(in srgb, var(--color-quality) 10%, transparent);
   --sku-as-bdr: color-mix(in srgb, var(--color-quality) 25%, transparent);
 
-  --sku-co:     var(--color-appsec);
-  --sku-co-bg:  color-mix(in srgb, var(--color-appsec) 10%, transparent);
+  --sku-co: var(--color-appsec);
+  --sku-co-bg: color-mix(in srgb, var(--color-appsec) 10%, transparent);
   --sku-co-bdr: color-mix(in srgb, var(--color-appsec) 25%, transparent);
 
-  --sku-cl:     var(--near-black);
-  --sku-cl-bg:  color-mix(in srgb, var(--near-black) 8%, transparent);
+  --sku-cl: var(--near-black);
+  --sku-cl-bg: color-mix(in srgb, var(--near-black) 8%, transparent);
   --sku-cl-bdr: color-mix(in srgb, var(--near-black) 16%, transparent);
 
   /* Persona palette */
-  --persona-fo:     var(--color-finops);
-  --persona-fo-bg:  color-mix(in srgb, var(--color-finops) 10%, transparent);
+  --persona-fo: var(--color-finops);
+  --persona-fo-bg: color-mix(in srgb, var(--color-finops) 10%, transparent);
   --persona-fo-bdr: color-mix(in srgb, var(--color-finops) 25%, transparent);
 
-  --persona-fi:     var(--color-devops);
-  --persona-fi-bg:  color-mix(in srgb, var(--color-devops) 10%, transparent);
+  --persona-fi: var(--color-devops);
+  --persona-fi-bg: color-mix(in srgb, var(--color-devops) 10%, transparent);
   --persona-fi-bdr: color-mix(in srgb, var(--color-devops) 25%, transparent);
 
-  --persona-te:     var(--color-appsec);
-  --persona-te-bg:  color-mix(in srgb, var(--color-appsec) 10%, transparent);
+  --persona-te: var(--color-appsec);
+  --persona-te-bg: color-mix(in srgb, var(--color-appsec) 10%, transparent);
   --persona-te-bdr: color-mix(in srgb, var(--color-appsec) 25%, transparent);
 
-  --persona-en:     var(--color-quality);
-  --persona-en-bg:  color-mix(in srgb, var(--color-quality) 10%, transparent);
+  --persona-en: var(--color-quality);
+  --persona-en-bg: color-mix(in srgb, var(--color-quality) 10%, transparent);
   --persona-en-bdr: color-mix(in srgb, var(--color-quality) 25%, transparent);
 
-  --persona-pr:     var(--near-black);
-  --persona-pr-bg:  color-mix(in srgb, var(--near-black) 8%, transparent);
+  --persona-pr: var(--near-black);
+  --persona-pr-bg: color-mix(in srgb, var(--near-black) 8%, transparent);
   --persona-pr-bdr: color-mix(in srgb, var(--near-black) 16%, transparent);
-
 
   font-family: var(--font-body);
   background: var(--bg);
@@ -94,7 +93,9 @@
   flex-direction: column;
   overflow: hidden;
 
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 }
 
 /* ── Announcement Bar ── */
@@ -148,7 +149,9 @@
   flex: 1;
   overflow-x: auto;
   scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .navBtn {
@@ -163,9 +166,17 @@
   border-radius: var(--r-md);
   cursor: pointer;
   white-space: nowrap;
-  transition: color var(--transition-fast), background var(--transition-fast);
-  &:hover { color: var(--text-primary); background: var(--bg-surface); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+  &:hover {
+    color: var(--text-primary);
+    background: var(--bg-surface);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
 }
 
 .navBtnActive {
@@ -197,8 +208,13 @@
   align-items: center;
   border-radius: 50%;
   transition: box-shadow var(--transition-fast);
-  &:hover { box-shadow: 0 0 0 2px var(--border-medium); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  &:hover {
+    box-shadow: 0 0 0 2px var(--border-medium);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .avatarInitials {
@@ -233,8 +249,14 @@
 }
 
 @keyframes dropIn {
-  from { opacity: 0; transform: translateY(-6px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .userDropdownHeader {
@@ -307,12 +329,17 @@
   font-weight: var(--weight-medium);
   color: var(--text-secondary);
   text-align: left;
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
   &:hover {
     background: var(--bg-surface);
     color: var(--text-primary);
   }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
 }
 
 /* ── Section Wrapper ── */
@@ -358,8 +385,13 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  transition: border-color var(--transition-fast), background var(--transition-fast);
-  &:hover { border-color: var(--border-hover); background: var(--bg-card-hover); }
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+  &:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+  }
 }
 
 /* ── Stat Cards ── */
@@ -408,9 +440,15 @@
   border-radius: var(--r-lg);
   padding: var(--space-lg);
   cursor: pointer;
-  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
   box-shadow: var(--shadow-whisper);
-  &:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
 }
 
 .skuCardActive {
@@ -484,7 +522,11 @@
   border-radius: var(--r-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
-  &:hover { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-surface); }
+  &:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+    background: var(--bg-surface);
+  }
 }
 
 .tabBtnActive {
@@ -572,8 +614,13 @@
   font-size: inherit;
   color: inherit;
   transition: border-color var(--transition-fast);
-  &:hover { border-color: var(--border-hover); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  &:hover {
+    border-color: var(--border-hover);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .discoveryCardOpen {
@@ -712,7 +759,10 @@
   cursor: pointer;
   width: 100%;
   transition: all var(--transition-fast);
-  &:hover { background: var(--bg-card); border-color: var(--border); }
+  &:hover {
+    background: var(--bg-card);
+    border-color: var(--border);
+  }
 }
 
 .personaNavBtnActive {
@@ -790,7 +840,9 @@
   color: var(--text-secondary);
   padding: var(--space-xs) 0;
   border-bottom: 1px solid var(--border);
-  &:last-child { border-bottom: none; }
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 /* ── Customer ── */
@@ -825,13 +877,24 @@
     bottom: -13px;
     left: -13px;
   }
-  &:hover { transform: translate(-50%, -50%) scale(1.3); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+  }
 }
 
-.timelineDotRed    { background: var(--danger); }
-.timelineDotYellow { background: var(--warn); }
-.timelineDotGreen  { background: var(--success); }
+.timelineDotRed {
+  background: var(--danger);
+}
+.timelineDotYellow {
+  background: var(--warn);
+}
+.timelineDotGreen {
+  background: var(--success);
+}
 .timelineDotActive {
   box-shadow: 0 0 0 4px var(--border-medium);
   transform: translate(-50%, -50%) scale(1.2);
@@ -870,7 +933,9 @@
   border-radius: var(--r-md);
   padding: var(--space-sm) var(--space-md);
   margin-bottom: var(--space-sm);
-  &:last-child { margin-bottom: 0; }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .stageLabel {
@@ -903,7 +968,10 @@
   cursor: pointer;
   transition: all var(--transition-fast);
   text-align: left;
-  &:hover { border-color: var(--border-hover); box-shadow: var(--shadow-whisper); }
+  &:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-whisper);
+  }
 }
 
 .customerNavCardActive {
@@ -946,7 +1014,10 @@
   text-align: left;
   width: 100%;
   transition: all var(--transition-fast);
-  &:hover { background: var(--bg-card); border-color: var(--border); }
+  &:hover {
+    background: var(--bg-card);
+    border-color: var(--border);
+  }
 }
 
 .lessonNavBtnActive {
@@ -1116,8 +1187,15 @@
   color: inherit;
   transition: all var(--transition-fast);
   box-shadow: var(--shadow-whisper);
-  &:hover { border-color: var(--border-hover); background: var(--bg-card-hover); box-shadow: var(--shadow-lift); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  &:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-lift);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .roadmapItemHeader {
@@ -1212,8 +1290,12 @@
   cursor: pointer;
   text-align: left;
   transition: background var(--transition-fast);
-  &:hover { background: var(--bg-surface); }
-  &:last-child { border-bottom: none; }
+  &:hover {
+    background: var(--bg-surface);
+  }
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .compNavBtnActive {
@@ -1323,10 +1405,24 @@
   padding: var(--space-sm) var(--space-sm) !important;
 }
 
-.ciVY { color: var(--success); font-size: var(--text-label); }
-.ciVP { color: var(--warn); font-size: var(--text-label); }
-.ciVN { color: var(--text-muted); font-size: var(--text-label); }
-.ciVNote { font-size: var(--text-label); color: var(--text-muted); display: block; margin-top: 2px; }
+.ciVY {
+  color: var(--success);
+  font-size: var(--text-label);
+}
+.ciVP {
+  color: var(--warn);
+  font-size: var(--text-label);
+}
+.ciVN {
+  color: var(--text-muted);
+  font-size: var(--text-label);
+}
+.ciVNote {
+  font-size: var(--text-label);
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
 
 /* ── Cross-Sell Playbook ── */
 
@@ -1400,7 +1496,10 @@
   transition: all var(--transition-fast);
   background: transparent;
   border: 1px solid;
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .csIcpResult {
@@ -1493,8 +1592,14 @@
   width: 100%;
   text-align: left;
   transition: all var(--transition-fast);
-  &:hover { background: var(--bg-card); border-color: var(--border); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  &:hover {
+    background: var(--bg-card);
+    border-color: var(--border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .csDqNavBtnActive {
@@ -1564,9 +1669,16 @@
   border-radius: var(--r-md);
   overflow: hidden;
   cursor: pointer;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-  &:hover { border-color: var(--border-hover); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  &:hover {
+    border-color: var(--border-hover);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .csFlagCardHdr {
@@ -1737,10 +1849,20 @@
   border-radius: var(--r-lg);
   overflow: hidden;
   cursor: pointer;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
   box-shadow: var(--shadow-whisper);
-  &:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  &:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .csFcBanner {
@@ -1852,7 +1974,10 @@
   white-space: nowrap;
   flex-shrink: 0;
   transition: all var(--transition-fast);
-  &:hover { border-color: var(--border-hover); color: var(--text-primary); }
+  &:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+  }
 }
 
 .csDpBody {
@@ -1885,8 +2010,14 @@
   border-bottom: 1px solid var(--border);
   display: flex;
   gap: var(--space-sm);
-  &::before { content: '→'; color: var(--accent); flex-shrink: 0; }
-  &:last-child { border-bottom: none; }
+  &::before {
+    content: '→';
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .csDpStarter {
@@ -1931,8 +2062,14 @@
   border-radius: var(--r-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
-  &:hover { border-color: var(--border-hover); color: var(--text-primary); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  &:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .csScBtnActive {
@@ -1956,7 +2093,9 @@
   margin-bottom: var(--space-md);
   overflow-x: auto;
   scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .csPathStep {
@@ -2240,8 +2379,14 @@
   display: flex;
   gap: var(--space-sm);
   align-items: flex-start;
-  &::before { content: '→'; color: var(--accent); flex-shrink: 0; }
-  &:last-child { border-bottom: none; }
+  &::before {
+    content: '→';
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .mRec {
@@ -2328,7 +2473,11 @@
   border-radius: var(--r-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
-  &:hover { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-surface); }
+  &:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+    background: var(--bg-surface);
+  }
 }
 
 .qaSkuTabActive {
@@ -2356,8 +2505,13 @@
   color: inherit;
   transition: border-color var(--transition-fast);
   box-shadow: var(--shadow-whisper);
-  &:hover { border-color: var(--border-hover); }
-  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  &:hover {
+    border-color: var(--border-hover);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
 }
 
 .qaCardOpen {
@@ -2434,8 +2588,13 @@
   width: 100%;
   text-align: left;
   margin-bottom: var(--space-xl);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  &:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
 }
 
 .quizHubCard {
@@ -2449,7 +2608,11 @@
   text-align: left;
   transition: all var(--transition-fast);
   box-shadow: var(--shadow-whisper);
-  &:hover { transform: translateY(-2px); background: var(--bg-card-hover); box-shadow: var(--shadow-lift); }
+  &:hover {
+    transform: translateY(-2px);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-lift);
+  }
 }
 
 .qhcIcon {
@@ -2697,8 +2860,14 @@
   cursor: pointer;
   transition: all var(--transition-fast);
   width: 100%;
-  &:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-sub); color: var(--text-primary); }
-  &:disabled { cursor: default; }
+  &:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: var(--accent-sub);
+    color: var(--text-primary);
+  }
+  &:disabled {
+    cursor: default;
+  }
 }
 
 .quizOptCorrect {
@@ -2768,14 +2937,20 @@
 .quizBtnPrimary {
   background: var(--near-black);
   color: var(--bg-white);
-  &:hover { background: var(--hover-dark); }
+  &:hover {
+    background: var(--hover-dark);
+  }
 }
 
 .quizBtnGhost {
   background: var(--bg-panel);
   border: 1px solid var(--border);
   color: var(--text-secondary);
-  &:hover { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-surface); }
+  &:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+    background: var(--bg-surface);
+  }
 }
 
 /* ── Quiz Results ── */
@@ -2819,7 +2994,9 @@
   gap: var(--space-sm);
   padding: var(--space-sm) 0;
   border-bottom: 1px solid var(--border);
-  &:last-child { border-bottom: none; }
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .qrlIcon {
@@ -2830,8 +3007,12 @@
   text-align: center;
 }
 
-.qrlItemPass .qrlIcon { color: var(--success); }
-.qrlItemFail .qrlIcon { color: var(--danger); }
+.qrlItemPass .qrlIcon {
+  color: var(--success);
+}
+.qrlItemFail .qrlIcon {
+  color: var(--danger);
+}
 
 .qrlQ {
   font-size: var(--text-label);
@@ -2843,7 +3024,9 @@
 .reveal {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .revealIn {
@@ -3049,7 +3232,9 @@
   cursor: pointer;
   transition: all var(--transition-fast);
   white-space: nowrap;
-  &:hover { color: var(--text-primary); }
+  &:hover {
+    color: var(--text-primary);
+  }
 }
 
 .ciModeTabActive {
@@ -3086,8 +3271,14 @@
   cursor: pointer;
   min-width: 220px;
   transition: border-color var(--transition-fast);
-  &:hover { border-color: var(--border-hover); }
-  &:focus { outline: 2px solid var(--accent); outline-offset: 2px; border-color: var(--accent); }
+  &:hover {
+    border-color: var(--border-hover);
+  }
+  &:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-color: var(--accent);
+  }
 }
 
 .ciHarnessLabel {
@@ -3127,7 +3318,10 @@
   text-decoration: none;
   white-space: nowrap;
   transition: all var(--transition-fast);
-  &:hover { background: var(--accent-sub); border-color: var(--accent-bdr); }
+  &:hover {
+    background: var(--accent-sub);
+    border-color: var(--accent-bdr);
+  }
 }
 
 .ciMultiRow {
@@ -3218,7 +3412,9 @@
   cursor: pointer;
   transition: all var(--transition-fast);
   white-space: nowrap;
-  &:hover { color: var(--text-primary); }
+  &:hover {
+    color: var(--text-primary);
+  }
 }
 
 .lessonTabBtnActive {
@@ -3250,8 +3446,15 @@
   color: var(--text-secondary);
   cursor: pointer;
   transition: all var(--transition-fast);
-  &:hover:not(:disabled) { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-surface); }
-  &:disabled { opacity: 0.35; cursor: default; }
+  &:hover:not(:disabled) {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+    background: var(--bg-surface);
+  }
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
 }
 
 .lessonPanelNavCount {
@@ -3279,31 +3482,66 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .roadmapGrid       { grid-template-columns: 1fr; }
-  .roadmapGrid4      { grid-template-columns: repeat(2, 1fr); }
-  .maturityGrid      { grid-template-columns: 1fr; }
-  .personaLayout     { grid-template-columns: 1fr; }
-  .competitiveLayout { grid-template-columns: 1fr; }
-  .lessonLayout      { grid-template-columns: 1fr; }
-  .csDiscoLayout     { grid-template-columns: 1fr; }
-  .csMatGrid         { grid-template-columns: 1fr; }
-  .csDpBody          { grid-template-columns: 1fr; }
-  .csScoringBar      { grid-template-columns: 1fr; }
-  .csDqBottom        { grid-template-columns: 1fr; }
-  .csIcpGrid         { grid-template-columns: repeat(2, 1fr); }
-  .csFlowGrid        { grid-template-columns: repeat(2, 1fr); }
+  .roadmapGrid {
+    grid-template-columns: 1fr;
+  }
+  .roadmapGrid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .maturityGrid {
+    grid-template-columns: 1fr;
+  }
+  .personaLayout {
+    grid-template-columns: 1fr;
+  }
+  .competitiveLayout {
+    grid-template-columns: 1fr;
+  }
+  .lessonLayout {
+    grid-template-columns: 1fr;
+  }
+  .csDiscoLayout {
+    grid-template-columns: 1fr;
+  }
+  .csMatGrid {
+    grid-template-columns: 1fr;
+  }
+  .csDpBody {
+    grid-template-columns: 1fr;
+  }
+  .csScoringBar {
+    grid-template-columns: 1fr;
+  }
+  .csDqBottom {
+    grid-template-columns: 1fr;
+  }
+  .csIcpGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .csFlowGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
-  .sectionWrap { padding: var(--space-lg) var(--space-md) var(--space-2xl); }
-  .skuGrid     { grid-template-columns: 1fr; }
-  .roiResults  { grid-template-columns: 1fr; }
-  .csIcpGrid   { grid-template-columns: 1fr; }
+  .sectionWrap {
+    padding: var(--space-lg) var(--space-md) var(--space-2xl);
+  }
+  .skuGrid {
+    grid-template-columns: 1fr;
+  }
+  .roiResults {
+    grid-template-columns: 1fr;
+  }
+  .csIcpGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Reduced Motion ── */
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .revealIn {
+  .reveal,
+  .revealIn {
     opacity: 1;
     transform: none;
     transition: none;

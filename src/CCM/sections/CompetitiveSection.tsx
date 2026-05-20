@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import { CI_COMPS, CI_GROUPS, CI_ROWS, COMP_CARDS } from '../data/competitive'
-import styles from '../ccm.module.scss'
+import { useState } from 'react';
+import { CI_COMPS, CI_GROUPS, CI_ROWS, COMP_CARDS } from '../data/competitive';
+import styles from '../ccm.module.scss';
 
-type CiMode = 'dropdown' | 'multi'
-type CiCat = 'all' | 'visibility' | 'optimization' | 'governance' | 'platform'
+type CiMode = 'dropdown' | 'multi';
+type CiCat = 'all' | 'visibility' | 'optimization' | 'governance' | 'platform';
 
 const CAT_LABELS: { id: CiCat; label: string }[] = [
   { id: 'all', label: 'All capabilities' },
@@ -11,46 +11,48 @@ const CAT_LABELS: { id: CiCat; label: string }[] = [
   { id: 'optimization', label: 'Optimization & Automation' },
   { id: 'governance', label: 'Governance & Compliance' },
   { id: 'platform', label: 'Platform Integration' },
-]
+];
 
 function cellClass(v: string): string {
-  if (v === 'Y') return styles.ciVY
-  if (v === 'P') return styles.ciVP
-  return styles.ciVN
+  if (v === 'Y') return styles.ciVY;
+  if (v === 'P') return styles.ciVP;
+  return styles.ciVN;
 }
 
 function cellLabel(v: string, isH: boolean): string {
-  if (v === 'Y') return isH ? '✓' : '✓ Yes'
-  if (v === 'P') return isH ? '~' : '~ Partial'
-  return isH ? '—' : '— No'
+  if (v === 'Y') return isH ? '✓' : '✓ Yes';
+  if (v === 'P') return isH ? '~' : '~ Partial';
+  return isH ? '—' : '— No';
 }
 
 export function CompetitiveSection() {
-  const [activeCardIdx, setActiveCardIdx] = useState(0)
-  const [showMatrix, setShowMatrix] = useState(false)
-  const [ciMode, setCiMode] = useState<CiMode>('dropdown')
-  const [ciDdVal, setCiDdVal] = useState('')
-  const [ciMultiSelected, setCiMultiSelected] = useState<string[]>([])
-  const [ciCat, setCiCat] = useState<CiCat>('all')
+  const [activeCardIdx, setActiveCardIdx] = useState(0);
+  const [showMatrix, setShowMatrix] = useState(false);
+  const [ciMode, setCiMode] = useState<CiMode>('dropdown');
+  const [ciDdVal, setCiDdVal] = useState('');
+  const [ciMultiSelected, setCiMultiSelected] = useState<string[]>([]);
+  const [ciCat, setCiCat] = useState<CiCat>('all');
 
-  const card = COMP_CARDS[activeCardIdx]
+  const card = COMP_CARDS[activeCardIdx];
 
   const toggleMultiComp = (id: string) => {
     setCiMultiSelected((prev) => {
-      if (prev.includes(id)) return prev.filter((x) => x !== id)
-      if (prev.length >= 4) return prev
-      return [...prev, id]
-    })
-  }
+      if (prev.includes(id)) return prev.filter((x) => x !== id);
+      if (prev.length >= 4) return prev;
+      return [...prev, id];
+    });
+  };
 
-  const ddComp = ciDdVal ? CI_COMPS.find((c) => c.id === ciDdVal) : null
+  const ddComp = ciDdVal ? CI_COMPS.find((c) => c.id === ciDdVal) : null;
 
   const visibleComps =
     ciMode === 'dropdown'
-      ? ddComp ? [ddComp] : CI_COMPS
+      ? ddComp
+        ? [ddComp]
+        : CI_COMPS
       : ciMultiSelected.length > 0
         ? CI_COMPS.filter((c) => ciMultiSelected.includes(c.id))
-        : CI_COMPS
+        : CI_COMPS;
 
   // const filteredRows = ciCat === 'all'
   //   ? CI_ROWS
@@ -61,19 +63,22 @@ export function CompetitiveSection() {
   //   : filteredRows.filter((r) => r.grp === undefined || CI_ROWS.some((row) => row.grp && CI_ROWS.indexOf(row) < CI_ROWS.indexOf(r) && CI_ROWS.findIndex((x) => x.cat === ciCat && CI_ROWS.indexOf(x) > CI_ROWS.indexOf(row)) > -1))
 
   // Simplified filter: for non-all categories, filter out group headers that don't belong
-  const displayRows = ciCat === 'all'
-    ? CI_ROWS
-    : CI_ROWS.filter((r) => {
-        if (r.grp) return false
-        return r.cat === ciCat
-      })
+  const displayRows =
+    ciCat === 'all'
+      ? CI_ROWS
+      : CI_ROWS.filter((r) => {
+          if (r.grp) return false;
+          return r.cat === ciCat;
+        });
 
   return (
     <div>
       <div className={styles.sectionHdr}>
         <div className={styles.sectionEyebrow}>Competitive Intelligence</div>
         <h2 className={styles.sectionTitle}>Win Against the Field</h2>
-        <p className={styles.sectionSub}>Battle cards for the most common competitive scenarios, plus the full capability matrix.</p>
+        <p className={styles.sectionSub}>
+          Battle cards for the most common competitive scenarios, plus the full capability matrix.
+        </p>
       </div>
 
       {/* Battle Cards */}
@@ -95,15 +100,21 @@ export function CompetitiveSection() {
           <div className={styles.compSubtitle}>Competitor: {card.comp}</div>
 
           <div className={styles.stage}>
-            <div className={styles.stageLabel} style={{ color: 'var(--danger)' }}>THE GAP WE ACKNOWLEDGED</div>
+            <div className={styles.stageLabel} style={{ color: 'var(--danger)' }}>
+              THE GAP WE ACKNOWLEDGED
+            </div>
             <div className={styles.stageText}>{card.gap}</div>
           </div>
           <div className={styles.stage}>
-            <div className={styles.stageLabel} style={{ color: 'var(--warn)' }}>WHAT WAS HAPPENING</div>
+            <div className={styles.stageLabel} style={{ color: 'var(--warn)' }}>
+              WHAT WAS HAPPENING
+            </div>
             <div className={styles.stageText}>{card.oldState}</div>
           </div>
           <div className={styles.stage}>
-            <div className={styles.stageLabel} style={{ color: 'var(--success)' }}>HOW WE FIX IT</div>
+            <div className={styles.stageLabel} style={{ color: 'var(--success)' }}>
+              HOW WE FIX IT
+            </div>
             <div className={styles.stageText}>{card.fix}</div>
           </div>
 
@@ -150,7 +161,7 @@ export function CompetitiveSection() {
               <div className={styles.ciDdRow}>
                 <div>
                   <div className={styles.ciDdLabel}>Harness CCM</div>
-                  <div className={styles.ciHarnessLabel}>✓ Harness CCM — AI-Native FinOps</div>
+                  <div className={styles.ciHarnessLabel}>✓ Harness AR— AI-Native FinOps</div>
                 </div>
                 <div className={styles.ciVsBadge}>vs</div>
                 <div>
@@ -163,44 +174,80 @@ export function CompetitiveSection() {
                     <option value="">— Show all competitors —</option>
                     <optgroup label="Enterprise FinOps Platforms">
                       {['apptio', 'cloudhealth', 'flexera', 'servicenow'].map((id) => {
-                        const c = CI_COMPS.find((x) => x.id === id)
-                        return c ? <option key={id} value={id}>{c.name}</option> : null
+                        const c = CI_COMPS.find((x) => x.id === id);
+                        return c ? (
+                          <option key={id} value={id}>
+                            {c.name}
+                          </option>
+                        ) : null;
                       })}
                     </optgroup>
                     <optgroup label="Cloud Provider Native">
                       {['aws', 'azure', 'gcp'].map((id) => {
-                        const c = CI_COMPS.find((x) => x.id === id)
-                        return c ? <option key={id} value={id}>{c.name}</option> : null
+                        const c = CI_COMPS.find((x) => x.id === id);
+                        return c ? (
+                          <option key={id} value={id}>
+                            {c.name}
+                          </option>
+                        ) : null;
                       })}
                     </optgroup>
                     <optgroup label="Observability">
                       {['datadog'].map((id) => {
-                        const c = CI_COMPS.find((x) => x.id === id)
-                        return c ? <option key={id} value={id}>{c.name}</option> : null
+                        const c = CI_COMPS.find((x) => x.id === id);
+                        return c ? (
+                          <option key={id} value={id}>
+                            {c.name}
+                          </option>
+                        ) : null;
                       })}
                     </optgroup>
                     <optgroup label="FinOps Specialists">
-                      {['cloudzero', 'vantage', 'doit', 'anodot', 'finout', 'cloudbolt', 'yotascale'].map((id) => {
-                        const c = CI_COMPS.find((x) => x.id === id)
-                        return c ? <option key={id} value={id}>{c.name}</option> : null
+                      {[
+                        'cloudzero',
+                        'vantage',
+                        'doit',
+                        'anodot',
+                        'finout',
+                        'cloudbolt',
+                        'yotascale',
+                      ].map((id) => {
+                        const c = CI_COMPS.find((x) => x.id === id);
+                        return c ? (
+                          <option key={id} value={id}>
+                            {c.name}
+                          </option>
+                        ) : null;
                       })}
                     </optgroup>
                     <optgroup label="Governance &amp; Policy">
                       {['corestack', 'kion', 'stacklet', 'cloudfix'].map((id) => {
-                        const c = CI_COMPS.find((x) => x.id === id)
-                        return c ? <option key={id} value={id}>{c.name}</option> : null
+                        const c = CI_COMPS.find((x) => x.id === id);
+                        return c ? (
+                          <option key={id} value={id}>
+                            {c.name}
+                          </option>
+                        ) : null;
                       })}
                     </optgroup>
                     <optgroup label="Kubernetes Specialists">
                       {['castai', 'scaleops', 'zesty'].map((id) => {
-                        const c = CI_COMPS.find((x) => x.id === id)
-                        return c ? <option key={id} value={id}>{c.name}</option> : null
+                        const c = CI_COMPS.find((x) => x.id === id);
+                        return c ? (
+                          <option key={id} value={id}>
+                            {c.name}
+                          </option>
+                        ) : null;
                       })}
                     </optgroup>
                     <optgroup label="IaC &amp; Developer FinOps">
                       {['infracost'].map((id) => {
-                        const c = CI_COMPS.find((x) => x.id === id)
-                        return c ? <option key={id} value={id}>{c.name}</option> : null
+                        const c = CI_COMPS.find((x) => x.id === id);
+                        return c ? (
+                          <option key={id} value={id}>
+                            {c.name}
+                          </option>
+                        ) : null;
                       })}
                     </optgroup>
                   </select>
@@ -227,27 +274,32 @@ export function CompetitiveSection() {
                     <div className={styles.ciGroupLabel}>{g.label}</div>
                     <div className={styles.ciMultiPills}>
                       {g.ids.map((id) => {
-                        const comp = CI_COMPS.find((c) => c.id === id)
-                        if (!comp) return null
-                        const active = ciMultiSelected.includes(id)
-                        const disabled = !active && ciMultiSelected.length >= 4
+                        const comp = CI_COMPS.find((c) => c.id === id);
+                        if (!comp) return null;
+                        const active = ciMultiSelected.includes(id);
+                        const disabled = !active && ciMultiSelected.length >= 4;
                         return (
                           <button
                             key={id}
                             className={`${styles.tabBtn} ${active ? styles.tabBtnActive : ''}`}
                             onClick={() => toggleMultiComp(id)}
                             disabled={disabled}
-                            style={{ fontSize: 'var(--text-label)', padding: '4px 10px', opacity: disabled ? 0.4 : 1 }}
+                            style={{
+                              fontSize: 'var(--text-label)',
+                              padding: '4px 10px',
+                              opacity: disabled ? 0.4 : 1,
+                            }}
                           >
                             {comp.short}
                           </button>
-                        )
+                        );
                       })}
                     </div>
                   </div>
                 ))}
                 <div className={styles.ciMultiCount}>
-                  Selected: <span className={styles.ciMultiCountNum}>{ciMultiSelected.length}</span> / 4
+                  Selected: <span className={styles.ciMultiCountNum}>{ciMultiSelected.length}</span>{' '}
+                  / 4
                   {ciMultiSelected.length > 0 && (
                     <button
                       className={styles.tabBtn}
@@ -293,7 +345,13 @@ export function CompetitiveSection() {
                           href={c.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          style={{ fontSize: 'var(--text-label)', color: 'var(--accent)', display: 'block', marginTop: 2, whiteSpace: 'nowrap' }}
+                          style={{
+                            fontSize: 'var(--text-label)',
+                            color: 'var(--accent)',
+                            display: 'block',
+                            marginTop: 2,
+                            whiteSpace: 'nowrap',
+                          }}
                         >
                           Compare →
                         </a>
@@ -307,11 +365,13 @@ export function CompetitiveSection() {
                   if (row.grp) {
                     return (
                       <tr key={`grp-${ri}`}>
-                        <td colSpan={2 + visibleComps.length} className={styles.ciRowGrp}>{row.grp}</td>
+                        <td colSpan={2 + visibleComps.length} className={styles.ciRowGrp}>
+                          {row.grp}
+                        </td>
                       </tr>
-                    )
+                    );
                   }
-                  const [hv, hn] = (row.h || 'N').split('|')
+                  const [hv, hn] = (row.h || 'N').split('|');
                   return (
                     <tr key={`row-${ri}`}>
                       <td className={styles.ciRowFeat}>{row.feat}</td>
@@ -320,17 +380,17 @@ export function CompetitiveSection() {
                         {hn && <span className={styles.ciVNote}>{hn}</span>}
                       </td>
                       {visibleComps.map((c) => {
-                        const raw = (row[c.id] as string) || 'N'
-                        const [v, note] = raw.split('|')
+                        const raw = (row[c.id] as string) || 'N';
+                        const [v, note] = raw.split('|');
                         return (
                           <td key={c.id}>
                             <span className={cellClass(v)}>{cellLabel(v, false)}</span>
                             {note && <span className={styles.ciVNote}>{note}</span>}
                           </td>
-                        )
+                        );
                       })}
                     </tr>
-                  )
+                  );
                 })}
               </tbody>
             </table>
@@ -338,5 +398,5 @@ export function CompetitiveSection() {
         </div>
       )}
     </div>
-  )
+  );
 }
