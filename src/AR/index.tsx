@@ -190,7 +190,7 @@ export default function ARPage() {
       <nav className={styles.topNav}>
         <div className={styles.navBrand}>
           <img
-            src="/assets/icon_ar.svg"
+            src={`${import.meta.env.BASE_URL}assets/icon_ar.svg`}
             alt="AR"
             width="22"
             height="22"
